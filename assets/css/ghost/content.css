@@ -1,0 +1,240 @@
+
+
+/* Content grid
+/* ---------------------------------------------------------- */
+
+.ghos3-canvas,
+.kg-width-full.kg-content-wide {
+    --gap: 4vw;
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--full)
+        [wide-start] var(--wide)
+        [main-start] var(--main) [main-end]
+        var(--wide) [wide-end]
+        var(--full) [full-end];
+}
+
+.ghos3-canvas > * {
+    grid-column: main-start / main-end;
+}
+
+.kg-width-wide,
+.kg-content-wide > div {
+    grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start / full-end;
+}
+
+.kg-width-full img {
+    width: 100%;
+}
+
+
+/* Content & Typography
+/* ---------------------------------------------------------- */
+
+.ghos3-content > * + * {
+    margin-top: 4vmin;
+}
+
+.ghos3-content [id]:not(:first-child) {
+    margin: 1.5em 0 0;
+}
+
+.ghos3-content > [id] + * {
+    margin-top: 1.5rem;
+}
+
+.ghos3-content [id] + .kg-card,
+.ghos3-content blockquote + .kg-card {
+    margin-top: 6vmin;
+}
+
+.ghos3-canvas > blockquote,
+.ghos3-canvas > ol,
+.ghos3-canvas > ul,
+.ghos3-canvas > dl,
+.ghos3-canvas > p {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.ghos3-content > ul,
+.ghos3-content > ol,
+.ghos3-content > dl {
+    padding-left: 1.9em;
+}
+
+.ghos3-content hr {
+    margin-top: 6vmin;
+}
+
+.ghos3-content hr + * {
+    margin-top: 6vmin !important;
+}
+
+.ghos3-content blockquote {
+    position: relative;
+    font-style: italic;
+}
+
+.ghos3-content blockquote::before {
+    content: "";
+    position: absolute;
+    left: -1.5em;
+    top: 0;
+    bottom: 0;
+    width: 0.3rem;
+    background: var(--color-primary);
+}
+
+@media (max-width: 650px) {
+    .ghos3-canvas blockquote,
+    .ghos3-canvas ol,
+    .ghos3-canvas ul,
+    .ghos3-canvas dl,
+    .ghos3-canvas p {
+        font-size: 1.8rem;
+    }
+
+    .ghos3-content blockquote::before {
+        left: -4vmin;
+    }
+}
+
+
+/* Cards
+/* ---------------------------------------------------------- */
+
+.ghos3-content :not(.kg-card):not([id]) + .kg-card {
+    margin-top: 6vmin;
+}
+
+.ghos3-content .kg-card + :not(.kg-card) {
+    margin-top: 6vmin;
+}
+
+figcaption {
+    padding: 1.5rem 1.5rem 0;
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+}
+
+figcaption strong {
+    color: rgba(0,0,0,0.8);
+}
+
+.ghos3-canvas :not(pre) code {
+    vertical-align: middle;
+    padding: 0.15em 0.4em 0.15em;
+    border: #e1eaef 1px solid;
+    font-weight: 400 !important;
+    font-size: 0.9em;
+    line-height: 1em;
+    color: #dc0050;
+    background: #f0f6f9;
+    border-radius: 0.25em;
+}
+
+.ghos3-canvas > pre {
+    overflow: scroll;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds  */
+.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.kg-image-card img {
+    margin: auto;
+}
+
+
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full.kg-card-hascaption {
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.kg-width-wide.kg-card-hascaption img {
+    grid-column: wide-start / wide-end;
+}
+.kg-width-full.kg-card-hascaption img {
+    grid-column: 1 / -1;
+}
+
+.kg-width-full.kg-card-hascaption figcaption {
+    grid-column: main-start / main-end;
+}
+
+
+/* Tables
+/* ---------------------------------------------------------- */
+
+.ghos3-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ghos3-content th {
+    padding: 0.5em 0.8em;
+    text-align: left;
+    font-size: .75em;
+    text-transform: uppercase;
+}
+
+.ghos3-content td {
+    padding: 0.4em 0.7em;
+}
+
+.ghos3-content tbody tr:nth-child(2n + 1) {
+    background-color: rgba(0,0,0,0.1);
+    padding: 1px;
+}
+
+.ghos3-content tbody tr:nth-child(2n + 2) td:last-child {
+    box-shadow:
+        inset 1px 0 rgba(0,0,0,0.1),
+        inset -1px 0 rgba(0,0,0,0.1);
+}
+
+.ghos3-content tbody tr:nth-child(2n + 2) td {
+    box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+}
+
+.ghos3-content tbody tr:last-child {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.kg-callout-card {
+    background: var(--color-secondary);
+    border: 2px dashed var(--color-primary);
+    border-radius: var(--radius);
+    padding: 2rem;
+}

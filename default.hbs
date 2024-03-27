@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <script src="{{asset "built/index.js"}}" defer></script>
+
+    <title>{{meta_title}}</title>
+
+    {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+
+</head>
+<body class="{{body_class}}">
+<div class="ghos3-viewport">
+
+<header id="ghos3-head" class="ghos3-head">
+    <nav class="ghos3-head-inner">
+        <div class="ghos3-head-brand">
+            <a class="ghos3-head-logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                {{else}}
+                    {{@site.title}}
+                {{/if}}
+            </a>
+            <a class="ghos3-burger" role="button" aria-label="menu">
+                <div class="ghos3-burger-box">
+                    <div class="ghos3-burger-inner"></div>
+                </div>
+            </a>
+        </div>
+        <div class="ghos3-head-menu">
+            {{navigation}}
+            <ul class="nav">
+                <li class="nav-apply">
+            <a class="ghos3-button ghos3-button-special" href="/apply/">Apply</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="ghos3-main">
+
+    {{{body}}}
+
+</main>
+
+<footer class="ghos3-foot">
+    <div class="ghos3-foot-inner">
+        <div class="ghos3-foot-brand">
+            <a class="ghos3-foot-logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                    <h2 class="ghos3-no-margin">{{@site.title}}</h2>
+                {{else}}
+                    {{@site.title}}
+                {{/if}}
+            </a>
+            <div class="ghos3-foot-meta">
+                <p>Have questions?</p>
+                <a href="mailto:{{@custom.email}}">{{@custom.email}}</a>
+                <div class="ghos3-foot-buttons">
+                    <a class="ghos3-button ghos3-button-primary" href="/contact/">Contact</a>
+                    <a class="ghos3-button ghos3-button-primary" href="/faq/">FAQ</a>
+                </div>
+            </div>
+            {{#if @custom.legal}}
+            <p>&copy {{date format="YYYY"}} {{@custom.legal}}</p>
+            {{else}}
+            <p>&copy {{date format="YYYY"}} Society for Out-of-Frame Education</p>
+            {{/if}}
+        </div>
+        <div class="ghos3-foot-right">
+            <div class="ghos3-foot-menu">
+                <a href="https://drustvo-evo.hr"><img src="{{asset 'assets/icons/evo-logo.svg'}}"></a>
+                <a href="https://www.instagram.com/summerschoolofscience/"><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="96px" height="96px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg></a>
+                <a href="https://www.facebook.com/summerschoolofscience/"><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="100px" height="100px">    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg></a>
+                <a href="https://www.linkedin.com/company/summer-school-of-science-s3"><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="100px" height="100px">    <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"/></svg></a>
+            </div>
+            <iframe class="ghos3-foot-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.699883229097!2d17.674261686440463!3d45.334682496483666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d84c4c4313f89%3A0x8aecc548b8ba8e9b!2sUl.%20dr.%20Franje%20Tu%C4%91mana%204a%2C%2034000%2C%20Po%C5%BEega!5e0!3m2!1sen!2shr!4v1707454708076!5m2!1sen!2shr" width="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+{{!-- <foot> --}}
+{{ghost_foot}}
+{{!-- Outputs important scripts - should always be included before closing body tag --}}
+
+</body>
+</html>

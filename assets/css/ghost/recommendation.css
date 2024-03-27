@@ -1,0 +1,60 @@
+/* Recommendation
+/* ---------------------------------------------------------- */
+
+.ghos3-recommendation {
+    background: #ffffff;
+    border-radius: 4rem;
+    padding: 4rem;
+    margin: 50px 0;
+}
+
+.ghos3-recommendation-author {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+}
+
+.ghos3-recommendation-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    > img {
+        max-height: 180px;
+        border-radius: 2rem;
+    }
+}
+
+.ghos3-recommendation-title {
+    color: var(--color-base);
+    margin-bottom: 0;
+}
+
+.ghos3-recommendation-affiliation {
+    font-weight: 500;
+}
+
+.ghos3-recommendation-description {
+    font-style: italic;
+    
+}
+
+.ghos3-recommendation-text {
+    font-style: italic;
+    font-size: larger;
+    text-align: justify;
+}
+
+.ghos3-recommendation-link {
+    float: right;
+}
+
+@media (max-width: 700px) {
+    .ghos3-readmore {
+        font-size: 1.6rem;
+    }
+    .ghos3-readmore svg {
+        margin: 0.1em 0 0;
+    }
+}

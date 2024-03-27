@@ -1,0 +1,80 @@
+{{!< default}}
+
+{{#post}}
+<article class="ghos3-article {{post_class}}">
+    {{#match @page.show_title_and_feature_image}}
+    <header class="ghos3-header ghos3-canvas">
+        <h1 class="ghos3-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="ghos3-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <figure class="ghos3-feature-image">
+                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+    </header>
+    {{/match}}
+
+    <div class="ghos3-content ghos3-canvas">
+        {{content}}
+
+        <div>
+            <a class="ghos3-button ghost-button-secondary" href="#projects">Projects</a>
+            <a class="ghos3-button ghost-button-secondary" href="#workshops">Workshops</a>
+            <a class="ghos3-button ghost-button-secondary" href="#lectures">Lectures</a>
+        </div>
+    </div>
+
+    <h1 id="projects">Projects</h1>
+
+    <p>
+        The bulk of your time at the School will be spent working on a <strong>research project</strong>. You may indicate your preference regarding the project in your application, but teams will be assigned upon arrival to the School, once you get to meet the project leaders in person.
+    </p>
+    <p>
+        Below are the projects available during S3 2023.
+    </p>
+
+    <section class="ghos3-projects">
+        {{#get "posts" filter="tags:project"}}
+        {{#foreach posts}}
+            <div class="ghos3-project">
+                <h1>{{title}}</h1>
+                
+            </div>
+        {{/foreach}}
+        {{/get}}
+    </section>
+
+    <h1 id="workshops">Workshops</h1>
+    <section class="ghos3-workshops">
+        {{#get "posts" filter="tags:workshop"}}
+        {{#foreach posts}}
+            <div class="ghos3-workshop">
+                <h1>{{title}}</h1>
+                
+            </div>
+        {{/foreach}}
+        {{/get}}
+    </section>
+
+    
+    <h1 id="lectures">Lectures</h1>
+    <section class="ghos3-lectures">
+        {{#get "posts" filter="tags:lecture"}}
+        {{#foreach posts}}
+            <div class="ghos3-lecture">
+                <h1>{{title}}</h1>
+                
+            </div>
+        {{/foreach}}
+        {{/get}}
+    </section>
+
+</article>
+{{/post}}

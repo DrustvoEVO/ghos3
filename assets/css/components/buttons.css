@@ -1,0 +1,173 @@
+/* Buttons
+/* ---------------------------------------------------------- */
+
+.ghos3-button, 
+.kg-btn {
+    display: inline-block;
+    min-width: 75px;
+    height: var(--height);
+    padding: 0 2rem;
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: var(--font-bold);
+    line-height: var(--height);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    appearance: none;
+    transition: 0.4s ease;
+}
+
+.ghos3-button.ghos3-button-fit {
+    width: 100%;
+}
+
+.ghos3-button.ghos3-button-small {
+    height: calc(var(--height) * 0.9);
+    line-height: calc(var(--height) * 0.9);
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.ghos3-button.ghos3-button-large {
+    height: calc(var(--height) * 1.2);
+    line-height: calc(var(--height) * 1.2);
+    padding: 0 2.5rem;
+    font-size: 1.7rem;
+}
+
+.ghos3-button.ghos3-button-disabled,
+.ghos3-button:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.ghos3-button, 
+.kg-btn {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px currentColor
+}
+
+.ghos3-button:hover,
+.kg-btn:hover {
+    text-decoration: none;
+    color: var(--color-primary) !important;
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+    transition: 0.2s ease;
+}
+
+.ghos3-button.ghos3-button-primary,
+.kg-btn.kg-btn-accent {
+    color: #fff !important;
+    background-color: var(--color-primary);
+    box-shadow: none;
+}
+
+.ghos3-button.ghos3-button-primary:hover {
+    background-color: var(--color-primary);
+    box-shadow: inset 0 0 0 2px #fff;
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
+
+.kg-btn.kg-btn-accent:hover {
+    background-color: var(--color-primary);
+    box-shadow: inset 0 0 0 2px var(--color-bg);
+    transition: 0.2s ease;
+}
+
+.ghos3-button.ghos3-button-secondary {
+    color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+
+    &::after {
+        background-color: var(--color-primary);
+        border-radius: var(--radius);
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%, 0) rotate(10deg);
+        transform-origin: top left;
+        transition: 0.4s transform ease-out;
+        will-change: transform;
+        z-index: -1;
+    }
+    
+    &:hover {
+        border: 2px solid transparent;
+        color: #ffffff !important;
+        transform: scale(1.05);
+        will-change: transform;
+    }
+    
+    &:hover::after {
+        transform: translate(0, 0);
+    }
+}
+
+.ghos3-button.ghos3-button-special {
+    min-width: 100px;
+    background: radial-gradient(circle at 50% 50%, var(--color-special-yellow), var(--color-special-red) 40%, var(--color-special-yellow));
+    background-size: 400% 400%;
+    animation: gradient 15s linear infinite;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: var(--font-bold);
+    line-height: 3rem;
+    box-shadow: none;
+}
+
+.ghos3-button-centered {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 89% 17%;
+    }
+    50% {
+        background-position: 58% 88%;
+    }
+    75% {
+        background-position: 32% 69%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.ghos3-button.ghos3-button-special:hover {
+    text-decoration: none;
+    background: var(--color-special-red);
+    box-shadow: none;
+    color: #ffffff !important;;
+    transition: 0.6s ease;
+}
+
+@media (max-width: 900px) {
+    .ghos3-button.ghos3-button-special {
+        height: 5.4rem;
+        width: 200px;
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+        border-radius: 2.7rem;
+    }
+}

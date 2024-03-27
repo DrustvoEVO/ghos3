@@ -1,0 +1,61 @@
+{{!< default}}
+
+{{#post}}
+<article class="ghos3-article {{post_class}}">
+    <header class="ghos3-program-header">
+        <h1 class="ghos3-title">Something for everyone</h1>
+        <p>
+            We organize the School in <strong>two camps</strong> so every student can feel at home learning in an appropriate environment.
+        </p>
+        <p>
+            What feels like the best fit for you?
+            </p>
+        <div class="ghos3-program-menu">
+            <div class="ghos3-summary-tile hoverable">
+                <h2>S<sup>3</sup></h2>
+                <p>
+                    Aimed at students aged 14 to 16, who have finished grades 9 or 10 (or equivalent).
+                </p>
+                <a class="ghos3-link-primary" href="">See this year's projects</a>
+            </div>
+            <div class="ghos3-summary-tile hoverable">
+                <h2>S<sup>3</sup>++</h2>
+                <p>
+                    Aimed at students aged 17 to 19, who have finished grades 11 or 12 (or equivalent).
+                </p>
+                <a class="ghos3-link-primary" href="">See this year's projects</a>
+            </div>
+            <div class="ghos3-summary-tile hoverable">
+                <h2>Archive</h2>
+                <p>
+                    A repository of previous years' camps, for reference.
+                </p>
+                <a class="ghos3-link-primary" href="">See previous projects</a>
+            </div>
+        </div>
+    </header>
+    {{#match @page.show_title_and_feature_image}}
+    <header class="ghos3-header ghos3-canvas">
+        <h1 class="ghos3-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="ghos3-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <figure class="ghos3-feature-image">
+                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+    </header>
+    {{/match}}
+
+    <div class="ghos3-container ghos3-program-container">
+        {{content}}
+    </div>
+
+</article>
+{{/post}}

@@ -1,0 +1,41 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+
+    /* Colours */
+    --color-primary: #ff7d43;
+    --color-secondary: #ffe3c7;
+    --color-gradient: #fd4b33;
+    --color-special-red: #e00f20;
+    --color-special-yellow: #ffbb14;
+    --color-base: #131313;
+    --color-dark: #451e0c;
+    --color-border: #ddd;
+    --color-bg: #fdf5eb;
+    --color-success: #80b912;
+    --color-error: #f05230;
+
+    /* Fonts */
+    --font-heading: -apple-system, BlinkMacSystemFont, "Space Grotesk", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-serif: Georgia, Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 2rem;
+
+}

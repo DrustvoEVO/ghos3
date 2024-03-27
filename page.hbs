@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{#post}}
+<article class="ghos3-article {{post_class}}">
+    {{#match @page.show_title_and_feature_image}}
+    <header class="ghos3-header ghos3-canvas">
+        <h1 class="ghos3-title">{{title}}</h1> {{!-- remove for program and people--}}
+
+        {{#if custom_excerpt}}
+            <p class="ghos3-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <figure class="ghos3-feature-image">
+                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+    </header>
+    {{/match}}
+
+    <div class="ghos3-content ghos3-canvas">
+        {{content}}
+    </div>
+
+</article>
+{{/post}}

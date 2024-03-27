@@ -1,0 +1,517 @@
+/*
+
+This is a development CSS file that is compiled to a minified
+production stylesheet in assets/built/screen.css using: npm run dev
+
+*/
+
+/* Lib - Local component imports
+/* ---------------------------------------------------------- */
+
+/* Base components */
+@import "vars.css";
+@import "components/global.css";
+@import "components/forms.css";
+@import "components/buttons.css";
+
+/* Ghost components */
+@import "ghost/header.css";
+@import "ghost/content.css";
+@import "ghost/readmore.css";
+/* @import "ghost/members.css";
+@import "ghost/errors.css"; */
+@import "ghost/footer.css";
+@import "ghost/badge.css";
+/* @import "ghost/pagination.css"; */
+@import "ghost/comments.css";
+@import "ghost/recommendation.css";
+
+
+
+/* Main - Your styles here! Edit below
+/* ---------------------------------------------------------- */
+
+html,
+.ghos3-viewport {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--color-bg);
+}
+
+.ghos3-main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ghos3-page {
+    padding: 0;
+}
+
+.ghos3-article {
+    padding: 8vmin 0;
+}
+
+.ghos3-postfeed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 4.8vmin 4vmin;
+    padding: 8vmin 0;
+}
+
+.ghos3-postfeed > *:first-child {
+    grid-column: 1 / -1;
+}
+
+.ghos3-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ghos3-head-actions a:not(.ghos3-button) {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.ghos3-head-actions a svg {
+    height: 1.8rem;
+    fill: currentcolor;
+}
+
+.ghos3-head-actions a:first-child svg {
+    margin-left: 20px;
+}
+
+.ghos3-head-actions a:last-child svg {
+    height: 2rem;
+}
+
+.ghos3-no-margin {
+    margin: 0; 
+}
+
+/* Index
+/* ---------------------------------------------------------- */
+
+/* .ghos3-card:not(:first-child) {
+    margin: 8vmin auto 0;
+} */
+
+.ghos3-card-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.ghos3-card-image {
+    width: 100%;
+    /* max-height: 700px; */
+    object-fit: cover;
+    margin-bottom: 4vmin;
+    aspect-ratio: 1 / 1;
+}
+
+.ghos3-card-image:first-of-type {
+    aspect-ratio: 16 / 9;
+}
+
+
+.ghos3-card-meta {
+    display: block;
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.ghos3-card-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.ghos3-card-content p {
+    margin: 1.2rem 0;
+    padding: 0 3vmin;
+}
+
+.ghos3-card-content > strong {
+    display: inline-block;
+    padding: 1px 0;
+    font-weight: 500;
+    box-shadow: 0 -1px 0 0 inset currentColor;
+    opacity: 0.75;
+}
+
+.ghos3-link-primary {
+    display: block;
+    padding: 2px 0;
+    font-weight: var(--font-bold);
+}
+
+.ghos3-link-primary::after {
+    content: " >";
+}
+
+.ghos3-link-primary:hover {
+    cursor: pointer;
+}
+
+.ghos3-link-secondary {
+
+}
+
+/* Page
+/* ---------------------------------------------------------- */
+
+.ghos3-page-head {
+    margin: 0 auto;
+    padding: 8vmin 0 4vmin;
+    text-align: center;
+}
+
+.ghos3-page-image {
+    margin: 4vmin 0 0 0;
+}
+
+.ghos3-page-head > p {
+    max-width: 720px;
+    margin: 0.3em auto 0;
+    padding: 0 6vmin;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+    .ghos3-page-head > p {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Post
+/* ---------------------------------------------------------- */
+
+.ghos3-header {
+    padding: 0 0 8vmin 0;
+    text-align: center;
+}
+
+.ghos3-post-meta {
+    display: block;
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.ghos3-excerpt {
+    margin: 1rem 0 0 0;
+}
+
+.ghos3-feature-image {
+    grid-column: wide-start / wide-end;
+    width: 100%;
+    margin: 8vmin 0 0;
+}
+
+.ghos3-feature-image img {
+    margin-inline: auto;
+    width: 100%;
+}
+
+.ghos3-post-footer {
+    margin: 2rem 0;
+}
+
+
+/* Author Archive
+/* ---------------------------------------------------------- */
+
+.ghos3-author-image {
+    height: 12vmin;
+    width: 12vmin;
+    margin: 0 auto 1.5em;
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.ghos3-author-meta {
+    margin: 2vmin 0 0 0;
+    font-size: 1.2em;
+}
+
+.ghos3-author-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghos3-author-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.75vmin;
+}
+
+.ghos3-author-links a + a:before {
+    display: block;
+    content: "";
+    margin: 0 1.25vmin 0 0;
+    height: 1em;
+    width: 1px;
+    background: rgba(0,0,0,0.3);
+    transform: rotate(20deg);
+}
+
+
+/* Hero
+/* ---------------------------------------------------------- */
+
+.ghos3-hero {
+    display: flex;
+    margin-top: 5rem;
+    
+}
+
+.ghos3-hero-title {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 100px;
+}
+
+.ghos3-hero-title-text {
+    color: var(--color-primary);
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 8rem;
+}
+
+.ghos3-hero-drawing {
+    min-width: 200px;
+    max-height: 280px;
+    margin-left: -60px;
+}
+
+.ghos3-hero img.ghos3-hero-image {
+    width: 480px;
+    max-height: 900px;
+    border-radius: 2rem;
+    margin: 80px 0 0 0;
+}
+
+.ghos3-hero-tag-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ghos3-hero-tag {
+    display: inline-flex;
+    height: var(--height);
+    background-color: #ffffff;
+    border-radius: var(--height);
+    margin: 0 10px 10px 0;
+}
+
+.ghos3-hero-tag img {
+    width: var(--height);
+    height: var(--height);
+    padding-left: 10px;
+}
+
+.ghos3-hero-tag span {
+    padding: 0 20px 0 10px;
+    color: var(--color-primary);
+    font-weight: bold;
+    line-height: var(--height);
+}
+
+
+/* Sections
+/* ---------------------------------------------------------- */
+
+section.ghos3-section-white {
+    background: #ffffff;
+}
+
+.ghos3-section {
+    margin: 50px 0;
+}
+
+.ghos3-section-image-left, 
+.ghos3-section-image-right,
+.ghos3-section-one-third, 
+.ghos3-section-two-thirds {
+    display: grid;
+    gap: 5rem;
+}
+
+.ghos3-section-image-left, 
+.ghos3-section-one-third {
+    grid-template-columns: 2fr 3fr;
+}
+
+.ghos3-section-image-right,
+.ghos3-section-two-thirds {
+    grid-template-columns: 3fr 2fr;
+}
+
+.ghos3-section-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghos3-section-image img {
+    width: 100%;
+    min-height: 300px;
+    border-radius: 2rem;
+}
+
+.ghos3-section-text {
+    
+}
+
+.ghos3-section-full-width {
+    max-width: 100%;
+    padding: 5rem 0;
+    
+    > div {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.ghos3-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghos3-camp-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.ghos3-camp-button {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.ghos3-camp-dates {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+
+/* Quotes
+/* ---------------------------------------------------------- */
+
+blockquote.ghos3-quote {
+    position: relative;
+    background: var(--color-secondary);
+    border-radius: 1rem;
+    padding: 1rem 2rem 1rem 2.8rem;
+    font-style: italic;
+}
+
+blockquote.ghos3-quote:before {
+    background-color: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.8rem;
+    left: 0;
+    top: 0;
+}
+
+.ghos3-quote-text {
+    text-emphasis: italic;
+}
+
+cite.ghos3-quote-author {
+    display: block;
+    text-align: right;
+    font-style: normal;
+}
+
+cite.ghos3-quote-author:before {content: "\2015  "}
+
+
+/* Summary Tiles
+/* ---------------------------------------------------------- */
+
+.ghos3-summary-tile {
+    background-color: var(--color-secondary);
+    border-radius: 4rem;
+    padding: 4rem;
+}
+
+.ghos3-summary-tile:not(:first-child) {
+    margin-top: 5rem;
+}
+
+.ghos3-summary-tile h1 {
+    margin-top: 0;
+}
+
+.ghos3-summary-tile.shiny {
+    color: #ffffff;
+    background: linear-gradient(120deg, var(--color-primary), var(--color-special-red));
+}
+
+.ghos3-summary-tile.hoverable:hover {
+    color: #ffffff;
+    background: linear-gradient(120deg, var(--color-primary), var(--color-special-red));
+}
+
+.ghos3-summary-tile.shiny h1 {
+    color: #ffffff;
+}
+
+.ghos3-summary-tile.hoverable:hover > h1 {
+    color: #ffffff;
+}
+
+@media (max-width: 700px) {
+    .ghos3-author-meta {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* Program Subpage
+/* ---------------------------------------------------------- */
+
+.ghos3-program-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+.ghos3-program-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.ghos3-program-container h1 {
+    text-align: right;
+}
