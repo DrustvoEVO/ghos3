@@ -342,6 +342,16 @@ html,
     line-height: var(--height);
 }
 
+@media (max-width: 700px) {
+    .ghos3-hero {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .ghos3-hero-title-text {
+        font-size: 6rem;
+    }
+}
+
 
 /* Sections
 /* ---------------------------------------------------------- */
@@ -422,6 +432,15 @@ section.ghos3-section-white {
     display: flex;
     align-items: center;
     justify-content: left;
+}
+
+@media (max-width: 700px) {
+    .ghos3-section-image-left, 
+    .ghos3-section-image-right,
+    .ghos3-section-one-third, 
+    .ghos3-section-two-thirds {
+        grid-template-columns: 1fr;
+    }
 }
 
 
