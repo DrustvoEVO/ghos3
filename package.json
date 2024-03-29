@@ -36,7 +36,7 @@
             "legal": {
                 "type": "text",
                 "default": "Society for Out-of-Frame Education",
-                "description": "Official name of the legal entity behing Summer School."
+                "description": "Official name of the legal entity behind Summer School."
             },
             "state": {
                 "type": "select",
@@ -48,6 +48,15 @@
                 ],
                 "default": "Upcoming - apps opening soon",
                 "description": "Affects homepage (next school dates), program (prev. camp year calculation) and allows applications."
+            },
+            "camps": {
+                "type": "select",
+                "options": [
+                    "Split",
+                    "Merged"
+                ],
+                "default": "Split",
+                "description": "Affects homepage (next school dates) and program (menu items)."
             }
         }
     },

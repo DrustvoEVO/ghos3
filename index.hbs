@@ -69,6 +69,7 @@
             <div class="ghos3-centered">
             {{#match @custom.state "Upcoming - apps opening soon"}}
                 <div>
+                {{#match @custom.camps "Merged"}}
                     <p>This year our usual S<sup>3</sup> and S<sup>3</sup>++ camps will be merged, and held on the following dates:</p>
                     <div class="ghos3-camp-list">
                         <div class="ghos3-camp-button">
@@ -77,15 +78,25 @@
                         <div class="ghos3-camp-dates">
                             28 July - 9 August, 2024
                         </div>
-                        <!--
+                    </div>
+                {{/match}}
+                {{#match @custom.camps "Split"}}
+                    <p>This year our usual S<sup>3</sup> and S<sup>3</sup>++ camps will be merged, and held on the following dates:</p>
+                    <div class="ghos3-camp-list">
                         <div class="ghos3-camp-button">
                             <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
                         </div>
                         <div class="ghos3-camp-dates">
-                            3 August - 13 August, 2024
+                            25 July - 5 August, 2025
                         </div>
-                        -->
+                        <div class="ghos3-camp-button">
+                            <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
+                        </div>
+                        <div class="ghos3-camp-dates">
+                            5 August - 13 August, 2025
+                        </div>
                     </div>
+                {{/match}}
                 </div>
             {{/match}}
             {{#match @custom.state "Upcoming - apps opened"}}

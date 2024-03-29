@@ -6,15 +6,17 @@
 1. Webiste administration
 1. Theme development
 
-# Website administration
+## Website administration
 
-## Page templates
+### Page templates
+
 Program
 Camp
 FAQ
 Contact
 
-## Required tags
+### Required tags
+
 camp-YYYY
 Project
 Project-Astronomy

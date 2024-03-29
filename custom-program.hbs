@@ -4,33 +4,62 @@
 <article class="ghos3-article {{post_class}}">
     <header class="ghos3-program-header">
         <h1 class="ghos3-title">Something for everyone</h1>
+        {{#match @custom.camps "Merged"}}
+        <p>
+            Usually, we organize the School in two camps so every student can feel at home learning in an appropriate environment.
+        </p>
+        <p>
+            This year, though, we decided to try something new, so the usual S<sup>3</sup> and S<sup>3</sup>++ camps are going to be merged into single S<sup>3</sup>/S<sup>3</sup>++ camp. 
+        </p>
+        {{/match}}
+        {{#match @custom.camps "Split"}}
         <p>
             We organize the School in <strong>two camps</strong> so every student can feel at home learning in an appropriate environment.
         </p>
         <p>
             What feels like the best fit for you?
-            </p>
+        </p>
+        {{/match}}
         <div class="ghos3-program-menu">
-            <div class="ghos3-summary-tile hoverable">
-                <h2>S<sup>3</sup></h2>
-                <p>
-                    Aimed at students aged 14 to 16, who have finished grades 9 or 10 (or equivalent).
-                </p>
-                <a class="ghos3-link-primary" href="">See this year's projects</a>
+            {{#match @custom.camps "Merged"}}
+            <div class="ghos3-program-menu-item col-2">
+                <div class="ghos3-summary-tile hoverable">
+                    <h2>S<sup>3</sup> / S<sup>3</sup>++</h2>
+                    <p>
+                        Aimed at all highschool students aged 14 to 19, who have finished grades 9, 10, 11 or 12 (or equivalent).
+                    </p>
+                    <a class="ghos3-link-primary" href="">See this year's projects</a>
+                </div>
             </div>
-            <div class="ghos3-summary-tile hoverable">
-                <h2>S<sup>3</sup>++</h2>
-                <p>
-                    Aimed at students aged 17 to 19, who have finished grades 11 or 12 (or equivalent).
-                </p>
-                <a class="ghos3-link-primary" href="">See this year's projects</a>
+            {{/match}}
+            {{#match @custom.camps "Split"}}
+            <div class="ghos3-program-menu-item">
+                <div class="ghos3-summary-tile hoverable">
+                    <h2>S<sup>3</sup></h2>
+                    <p>
+                        Aimed at students aged 14 to 16, who have finished grades 9 or 10 (or equivalent).
+                    </p>
+                    <a class="ghos3-link-primary" href="">See this year's projects</a>
+                </div>
             </div>
-            <div class="ghos3-summary-tile hoverable">
-                <h2>Archive</h2>
-                <p>
-                    A repository of previous years' camps, for reference.
-                </p>
-                <a class="ghos3-link-primary" href="">See previous projects</a>
+            <div class="ghos3-program-menu-item">
+                <div class="ghos3-summary-tile hoverable">
+                    <h2>S<sup>3</sup>++</h2>
+                    <p>
+                        Aimed at students aged 17 to 19, who have finished grades 11 or 12 (or equivalent).
+                    </p>
+                    <a class="ghos3-link-primary" href="">See this year's projects</a>
+                </div>
+            </div>
+            {{/match}}
+            <div class="ghos3-program-menu-item">
+                <div class="ghos3-summary-tile hoverable">
+                    <h2>Archive</h2>
+                    <p>
+                        A repository of previous years' camps, for reference (currently at our old website).
+                    </p>
+                    <a class="ghos3-link-primary" href="https://drustvo-evo.hr/s3/archive.html" target="_blank">See previous projects</a>
+                </div>
             </div>
         </div>
     </header>
