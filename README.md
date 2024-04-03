@@ -6,7 +6,9 @@ Ghost theme for Summer School of Science web
 
 1. [Webiste administration](#website-administration)
     1. [Login](#login)
-    1. [Page templates](#page-templates)
+    1. [Templates](#templates)
+        1. [Page templates](#page-templates)
+        1. [Post templates](#post-templates)
     1. [Required tags](#required-tags)
 1. [Theme development](#theme-development)
     1. [Environment setup](#environment-setup)
@@ -20,17 +22,29 @@ Ghost theme for Summer School of Science web
 
 When added to the staff members of S3, you will receive an email with details on how to setup your Ghost account. After registration, go to [s3.drustvo-evo.hr/ghost/](https://s3.drustvo-evo.hr/ghost/) and log in with your credentials and proceed to account settings, set up your account image and short bio.
 
-### Page templates
+### Templates
 
-For pages with custom elements, like [Program](https://s3.drustvo-evo.hr/program/) and [FAQ](https://s3.drustvo-evo.hr/faq/), there are custom templates selectable in Ghost backend (sidebar in edit page view). Templates [`custom-program.hbs`](#custom-programhbs), [`custom-faq.hbs`](#custom-faqhbs) and [`custom-contact.hbs`](#custom-contacthbs) are meant to be used only for specific pages and should never be manually selected from the dropdown menu, unlike [`custom-camp.hbs`](#custom-camphbs) which needs to be selected when creating new subpages for upcoming camps.
+#### Page templates
 
-#### custom-program.hbs
+For pages with custom elements, like [Program](https://s3.drustvo-evo.hr/program/) and [FAQ](https://s3.drustvo-evo.hr/faq/), there are custom templates selectable in Ghost backend (sidebar in edit page view). Templates [`page-program.hbs`](#page-programhbs), [`page-faq.hbs`](#page-faqhbs) and [`page-contact.hbs`](#page-contacthbs) are meant to be used only for specific pages and should never be manually selected from the dropdown menu, unlike [`page-camp.hbs`](#page-camphbs) which needs to be selected when creating new subpages for upcoming camps.
 
-#### custom-camp.hbs
+##### `page-program.hbs`
 
-#### custom-faq.hbs
+##### `page-camp.hbs`
 
-#### custom-contact.hbs
+##### `page-faq.hbs`
+
+##### `page-contact.hbs`
+
+#### Post templates
+
+Currently not in use, planned from version 2.X.X.
+
+##### `post-project.hbs`
+
+##### `post-workshop.hbs`
+
+##### `post-lecture.hbs`
 
 ### Required tags
 

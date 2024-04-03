@@ -37,15 +37,18 @@
         The bulk of your time at the School will be spent working on a <strong>research project</strong>. You may indicate your preference regarding the project in your application, but teams will be assigned upon arrival to the School, once you get to meet the project leaders in person.
     </p>
     <p>
-        Below are the projects available during S3 2023.
+        Below are the projects available during this years camp.
     </p>
 
     <section class="ghos3-projects">
         {{#get "posts" filter="tags:project"}}
+        {{#match posts.length "=" 0}}
+            <p>TBA</p>
+        {{/match}}
         {{#foreach posts}}
             <div class="ghos3-project">
-                <h1>{{title}}</h1>
-                
+                <h2>{{title}}</h2>
+                <p>{{content}}</p>
             </div>
         {{/foreach}}
         {{/get}}
@@ -54,9 +57,12 @@
     <h1 id="workshops">Workshops</h1>
     <section class="ghos3-workshops">
         {{#get "posts" filter="tags:workshop"}}
+        {{#match posts.length "=" 0}}
+            <p>TBA</p>
+        {{/match}}
         {{#foreach posts}}
             <div class="ghos3-workshop">
-                <h1>{{title}}</h1>
+                <h2>{{title}}</h2>
                 
             </div>
         {{/foreach}}
@@ -67,9 +73,12 @@
     <h1 id="lectures">Lectures</h1>
     <section class="ghos3-lectures">
         {{#get "posts" filter="tags:lecture"}}
+        {{#match posts.length "=" 0}}
+            <p>TBA</p>
+        {{/match}}
         {{#foreach posts}}
             <div class="ghos3-lecture">
-                <h1>{{title}}</h1>
+                <h2>{{title}}</h2>
                 
             </div>
         {{/foreach}}
