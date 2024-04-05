@@ -4,17 +4,17 @@
 :root {
 
     /* Colours */
-    --color-primary: #ff7d43;
-    --color-secondary: #ffe3c7;
-    --color-gradient: #fd4b33;
-    --color-special-red: #e00f20;
-    --color-special-yellow: #ffbb14;
-    --color-base: #131313;
-    --color-dark: #451e0c;
-    --color-border: #ddd;
-    --color-bg: #fdf5eb;
-    --color-success: #80b912;
-    --color-error: #f05230;
+    --color-primary: #ff7d43;           /* -- */
+    --color-secondary: #ffe3c7;         /* -- */
+    --color-gradient: #fd4b33;          /* -- */
+    --color-special-red: #e00f20;       /* -- */
+    --color-special-yellow: #ffbb14;    /* -- */
+    --color-base: #131313;              /* --black */
+    --color-dark: #451e0c;              /* -- */
+    --color-border: #ddd;               /* -- */
+    --color-bg: #fdf5eb;                /* -- */
+    --color-success: #80b912;           /* --green */
+    --color-error: #f05230;             /* --red */
 
     /* Fonts */
     --font-heading: -apple-system, BlinkMacSystemFont, "Space Grotesk", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

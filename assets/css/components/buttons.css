@@ -136,6 +136,25 @@
     justify-content: center;
 }
 
+.ghos3-button-list-centered {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghos3-button-list-centered a {
+    margin: 1rem;
+}
+
+.ghos3-button-send {
+
+}
+
+.ghos3-button-block {
+    
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 0%;

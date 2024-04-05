@@ -552,3 +552,17 @@ cite.ghos3-quote-author:before {content: "\2015  "}
         grid-column: 1; 
     }
 }
+
+
+/* Program Subpage
+/* ---------------------------------------------------------- */
+
+.ghos3-contact-container {
+    max-width: 600px;
+}
+
+.ghos3-contact-container a {
+    color: var(--color-base);
+    font-weight: var(--font-bold);
+    text-decoration: none;
+}
