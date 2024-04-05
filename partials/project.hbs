@@ -1,0 +1,35 @@
+<div class="ghos3-project">
+    <div class="ghos3-project-summary">   
+        <div>
+            <div>
+                <h5 class="ghos3-project-title">{{title}}</h5>
+                <div class="ghos3-project-category">
+                    Cat: {{tags}}
+                </div>
+            </div>
+            <div class="ghos3-project-about">
+                {{content}}
+            </div>
+        </div>
+        <img class="ghos3-project-image" src="{{feature_image}}"/>
+    </div>
+    <div class="ghos3-project-leader-list"> {{!-- consider moving to another partial --}}
+        {{#get "authors"}}
+        {{#foreach authors}}
+        <div class="ghos3-project-leader">
+            {{#if profile_image}}
+                <img class="ghos3-project-leader-image" src="{{profile_image}}" />
+            {{else}}
+                <img class="ghos3-project-leader-image" src="{{ asset 'assets/images/placeholder-people.png'}}" />
+            {{/if}}
+            <div>
+                <h6 class="ghos3-project-leader-name">{{name}}</h6>
+                <div class="ghos3-project-leader-bio">
+                    {{bio}}
+                </div>
+            </div>
+        </div>
+        {{/foreach}}
+        {{/get}}
+    </div>
+</div>

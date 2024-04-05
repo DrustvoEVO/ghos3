@@ -24,7 +24,12 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "ghost/badge.css";
 /* @import "ghost/pagination.css"; */
 @import "ghost/comments.css";
-@import "ghost/recommendation.css";
+
+/* Partials */
+@import "partials/recommendation.css";
+@import "partials/project.css";
+@import "partials/workshop.css";
+@import "partials/lecture.css";
 
 
 

@@ -4,7 +4,7 @@
 <article class="ghos3-article {{post_class}}">
     {{#match @page.show_title_and_feature_image}}
     <header class="ghos3-header ghos3-canvas">
-        <h1 class="ghos3-title">{{title}}</h1>
+        <h1 class="ghos3-title">S<sup>3</sup> {{date published_at format="YYYY"}}</h1>
 
         {{#if custom_excerpt}}
             <p class="ghos3-excerpt">{{custom_excerpt}}</p>
@@ -24,66 +24,58 @@
     <div class="ghos3-content ghos3-canvas">
         {{content}}
 
-        <div>
+        <div class="ghos3-button-list-centered">
             <a class="ghos3-button ghost-button-secondary" href="#projects">Projects</a>
             <a class="ghos3-button ghost-button-secondary" href="#workshops">Workshops</a>
             <a class="ghos3-button ghost-button-secondary" href="#lectures">Lectures</a>
-        </div>
+        </div>    
+
+        <h2 id="projects">Projects</h2>
+
+        <p>
+            The bulk of your time at the School will be spent working on a <strong>research project</strong>. You may indicate your preference regarding the project in your application, but teams will be assigned upon arrival to the School, once you get to meet the project leaders in person.
+        </p>
+        <p>
+            Below are the projects available during this years camp.
+        </p>
+
+        <section class="ghos3-projects">
+            {{#get "posts" filter=(concat "tags:project+tags:" slug)}}
+            {{#match posts.length "=" 0}}
+                <p>TBA</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "project"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
+        <h2 id="workshops">Workshops</h2>
+        <section class="ghos3-workshops">
+            {{#get "posts" filter=(concat "tags:workshop+tags:" slug)}}
+            {{#match posts.length "=" 0}}
+                <p>TBA</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "workshop"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
+        
+        <h2 id="lectures">Lectures</h2>
+        <section class="ghos3-lectures">
+            {{#get "posts" filter=(concat "tags:lecture+tags:" slug)}}
+            {{#match posts.length "=" 0}}
+                <p>TBA</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "lecture"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
     </div>
-
-    <h1 id="projects">Projects</h1>
-
-    <p>
-        The bulk of your time at the School will be spent working on a <strong>research project</strong>. You may indicate your preference regarding the project in your application, but teams will be assigned upon arrival to the School, once you get to meet the project leaders in person.
-    </p>
-    <p>
-        Below are the projects available during this years camp.
-    </p>
-
-    <section class="ghos3-projects">
-        {{#get "posts" filter="tags:project"}}
-        {{#match posts.length "=" 0}}
-            <p>TBA</p>
-        {{/match}}
-        {{#foreach posts}}
-            <div class="ghos3-project">
-                <h2>{{title}}</h2>
-                <p>{{content}}</p>
-            </div>
-        {{/foreach}}
-        {{/get}}
-    </section>
-
-    <h1 id="workshops">Workshops</h1>
-    <section class="ghos3-workshops">
-        {{#get "posts" filter="tags:workshop"}}
-        {{#match posts.length "=" 0}}
-            <p>TBA</p>
-        {{/match}}
-        {{#foreach posts}}
-            <div class="ghos3-workshop">
-                <h2>{{title}}</h2>
-                
-            </div>
-        {{/foreach}}
-        {{/get}}
-    </section>
-
-    
-    <h1 id="lectures">Lectures</h1>
-    <section class="ghos3-lectures">
-        {{#get "posts" filter="tags:lecture"}}
-        {{#match posts.length "=" 0}}
-            <p>TBA</p>
-        {{/match}}
-        {{#foreach posts}}
-            <div class="ghos3-lecture">
-                <h2>{{title}}</h2>
-                
-            </div>
-        {{/foreach}}
-        {{/get}}
-    </section>
 
 </article>
 {{/post}}

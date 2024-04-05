@@ -1,0 +1,54 @@
+.ghos3-project {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: var(--radius);
+}
+
+.ghos3-project-summary {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.ghos3-project-title {
+    
+}
+
+.ghos3-project-category {
+    border-radius: var(--radius);
+    height: var(--height);
+}
+
+.ghos3-project-image {
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+}
+
+.ghos3-project-about {
+    font-size: smaller;
+    text-align: justify;
+}
+
+.ghos3-project-leader-list {
+    
+}
+
+.ghos3-project-leader {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;       
+}
+
+.ghos3-project-leader-name {
+    
+}
+
+.ghos3-project-leader-image {
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    max-height: 200px;
+}
+
+.ghos3-project-leader-bio {
+    font-size: smaller;
+}
