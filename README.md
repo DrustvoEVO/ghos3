@@ -26,25 +26,25 @@ When added to the staff members of S3, you will receive an email with details on
 
 #### Page templates
 
-For pages with custom elements, like [Program](https://s3.drustvo-evo.hr/program/) and [FAQ](https://s3.drustvo-evo.hr/faq/), there are custom templates selectable in Ghost backend (sidebar in edit page view). Templates [`page-program.hbs`](#page-programhbs), [`page-faq.hbs`](#page-faqhbs) and [`page-contact.hbs`](#page-contacthbs) are meant to be used only for specific pages and should never be manually selected from the dropdown menu, unlike [`page-camp.hbs`](#page-camphbs) which needs to be selected when creating new subpages for upcoming camps.
+For pages with custom elements, like [Program](https://s3.drustvo-evo.hr/program/), [FAQ](https://s3.drustvo-evo.hr/faq/) and [Contact](https://s3.drustvo-evo.hr/contact/) there are custom page templates that are automatically applied based on the `page-:slug.hbs` file. However, when multiple pages use the same template, like Camps, it must be selected in Ghost backend, from a dropdown in sidebar when creating or editing a page. The dropdown lists all templates based on `custom-:template.hbs` files.
 
 ##### `page-program.hbs`
-
-##### `page-camp.hbs`
 
 ##### `page-faq.hbs`
 
 ##### `page-contact.hbs`
 
+##### `custom-camp.hbs`
+
 #### Post templates
 
 Currently not in use, planned from version 2.X.X.
 
-##### `post-project.hbs`
+##### `custom-project.hbs`
 
-##### `post-workshop.hbs`
+##### `custom-workshop.hbs`
 
-##### `post-lecture.hbs`
+##### `custom-lecture.hbs`
 
 ### Required tags
 
