@@ -559,7 +559,7 @@ cite.ghos3-quote-author:before {content: "\2015  "}
 }
 
 
-/* Program Subpage
+/* Contact Subpage
 /* ---------------------------------------------------------- */
 
 .ghos3-contact-container {
@@ -570,4 +570,11 @@ cite.ghos3-quote-author:before {content: "\2015  "}
     color: var(--color-base);
     font-weight: var(--font-bold);
     text-decoration: none;
+}
+
+/* Camp Subpage
+/* ---------------------------------------------------------- */
+
+.ghos3-camp-container {
+    max-width: 1200px;
 }

@@ -21,7 +21,7 @@
     </header>
     {{/match}}
 
-    <div class="ghos3-content ghos3-canvas">
+    <div class="ghos3-container ghost-camp-container">
         {{content}}
 
         <div class="ghos3-button-list-centered">
@@ -40,7 +40,7 @@
         </p>
 
         <section class="ghos3-projects">
-            {{#get "posts" filter=(concat "tags:project+tags:" slug)}}
+            {{#get "posts" filter=(concat "tags:project+tags:" slug) include="tags,authors"}}
             {{#match posts.length "=" 0}}
                 <p>TBA</p>
             {{/match}}
@@ -52,7 +52,7 @@
 
         <h2 id="workshops">Workshops</h2>
         <section class="ghos3-workshops">
-            {{#get "posts" filter=(concat "tags:workshop+tags:" slug)}}
+            {{#get "posts" filter=(concat "tags:workshop+tags:" slug) include="tags,authors"}}
             {{#match posts.length "=" 0}}
                 <p>TBA</p>
             {{/match}}
@@ -65,7 +65,7 @@
         
         <h2 id="lectures">Lectures</h2>
         <section class="ghos3-lectures">
-            {{#get "posts" filter=(concat "tags:lecture+tags:" slug)}}
+            {{#get "posts" filter=(concat "tags:lecture+tags:" slug) include="tags,authors"}}
             {{#match posts.length "=" 0}}
                 <p>TBA</p>
             {{/match}}

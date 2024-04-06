@@ -11,12 +11,20 @@
 }
 
 .ghos3-project-title {
-    
+    display: flex;
+}
+
+.ghos3-project-name {
+    margin-top: 0;
 }
 
 .ghos3-project-category {
     border-radius: var(--radius);
     height: var(--height);
+}
+
+.ghos3-project-category img {
+    display: inline;
 }
 
 .ghos3-project-image {
@@ -25,7 +33,7 @@
 }
 
 .ghos3-project-about {
-    font-size: smaller;
+    font-size: small;
     text-align: justify;
 }
 
@@ -50,5 +58,5 @@
 }
 
 .ghos3-project-leader-bio {
-    font-size: smaller;
+    font-size: small;
 }

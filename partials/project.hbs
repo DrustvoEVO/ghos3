@@ -1,10 +1,10 @@
 <div class="ghos3-project">
     <div class="ghos3-project-summary">   
-        <div>
-            <div>
-                <h5 class="ghos3-project-title">{{title}}</h5>
-                <div class="ghos3-project-category">
-                    Cat: {{tags}}
+        <div class="ghos3-project-details">
+            <div class="ghos3-project-title">
+                <h5 class="ghos3-project-name">{{title}}</h5>
+                <div class="ghos3-project-category" style="color: {{primary_tag.accent_color}};">
+                    <img class="ghos3-project-category-image" src="{{primary_tag.feature_image}}"/> {{primary_tag.name}}
                 </div>
             </div>
             <div class="ghos3-project-about">
@@ -14,7 +14,6 @@
         <img class="ghos3-project-image" src="{{feature_image}}"/>
     </div>
     <div class="ghos3-project-leader-list"> {{!-- consider moving to another partial --}}
-        {{#get "authors"}}
         {{#foreach authors}}
         <div class="ghos3-project-leader">
             {{#if profile_image}}
@@ -30,6 +29,5 @@
             </div>
         </div>
         {{/foreach}}
-        {{/get}}
     </div>
 </div>

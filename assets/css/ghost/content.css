@@ -63,7 +63,7 @@
 .ghos3-canvas > dl,
 .ghos3-canvas > p {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.6em;
 }
 
@@ -102,7 +102,7 @@
     .ghos3-canvas ul,
     .ghos3-canvas dl,
     .ghos3-canvas p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .ghos3-content blockquote::before {
