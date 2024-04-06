@@ -578,3 +578,16 @@ cite.ghos3-quote-author:before {content: "\2015  "}
 .ghos3-camp-container {
     max-width: 1200px;
 }
+
+/* People Subpage
+/* ---------------------------------------------------------- */
+
+.ghos3-people-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.ghos3-people-container {
+    max-width: 1200px;
+}
