@@ -24,26 +24,25 @@
     <div class="ghos3-content ghos3-canvas">
         {{content}}
 
-        <p>Filter categories:</p>
-
-        <div>
-            <a class="ghos3-button ghost-button-secondary" href="#projects">Applications</a>
-            <a class="ghos3-button ghost-button-secondary" href="#workshops">Selection procedure</a>
-            <a class="ghos3-button ghost-button-secondary" href="#lectures">Fees</a>
+        {{!-- <div class="ghos3-button-list">
+            <a class="ghos3-button ghos3-button-secondary" href="#projects">Applications</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#lectures">Fees and finances</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#workshops">Practical information</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#workshops">Projects and lectures</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#workshops">Volunteering</a>
         </div>
     
         <section class="ghos3-faqs">
             {{#get "posts" filter="tags:faq"}}
             {{#foreach posts}}
                 <div class="ghos3-faq">
-                    <h2>{{title}}</h2>
-                    <p>{{content}}</p>
+                    <p class="ghos3-faq-title">{{title}}</p>
+                    <p class="ghos3-faq-answer">{{content}}</p>
                 </div>
             {{/foreach}}
             {{/get}}
-        </section>
+        </section> --}}
     </div>
-
 
 </article>
 {{/post}}

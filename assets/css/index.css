@@ -604,6 +604,7 @@ cite.ghos3-quote-author:before {content: "\2015  "}
     margin: 2rem 0;
 }
 
+
 /* People Subpage
 /* ---------------------------------------------------------- */
 
@@ -615,4 +616,23 @@ cite.ghos3-quote-author:before {content: "\2015  "}
 
 .ghos3-people-container {
     max-width: 1200px;
+}
+
+
+/* FAQ Subpage
+/* ---------------------------------------------------------- */
+
+.ghos3-faq {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 4rem;
+    margin-bottom: 4rem;
+}
+
+.ghos3-faq-title {
+    font-weight: var(--font-bold);
+}
+
+.ghos3-faq-answer {
+    
 }
