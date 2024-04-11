@@ -4,7 +4,7 @@
             <div class="ghos3-project-title">
                 <h5 class="ghos3-project-name">{{title}}</h5>
                 <div class="ghos3-project-category" style="color: {{primary_tag.accent_color}};">
-                    <img class="ghos3-project-category-image" src="{{primary_tag.feature_image}}"/> {{primary_tag.name}}
+                    {{!-- <img class="ghos3-project-category-image" src="{{primary_tag.feature_image}}"/> {{primary_tag.name}} --}}
                 </div>
             </div>
             <div class="ghos3-project-about">
@@ -22,9 +22,14 @@
                 <img class="ghos3-project-leader-image" src="{{ asset 'assets/images/placeholder-people.png'}}" />
             {{/if}}
             <div>
-                <h6 class="ghos3-project-leader-name">{{name}}</h6>
+                <p class="ghos3-project-leader-name">{{name}}</p>
+                <p class="ghos3-project-leader-affiliation">{{location}}</p>
                 <div class="ghos3-project-leader-bio">
-                    {{bio}}
+                    {{#get "posts" filter=(concat "tags:about+primary_author:" slug) include="tags,authors"}}
+                    {{#foreach posts}}
+                        {{content}}
+                    {{/foreach}}
+                    {{/get}}
                 </div>
             </div>
         </div>

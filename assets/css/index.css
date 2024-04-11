@@ -579,6 +579,31 @@ cite.ghos3-quote-author:before {content: "\2015  "}
     max-width: 1200px;
 }
 
+.ghos3-camp-header {
+    margin-bottom: 2rem;
+}
+
+.ghos3-camp-title {
+    display: inline-block;
+    font-size: 5rem;
+
+}
+
+.ghos3-camp-duration {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    display: inline-block;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    border-radius: var(--radius);
+    padding: 0 2rem;
+    margin: auto 2rem;
+}
+
+.ghos3-camp-container section {
+    margin: 2rem 0;
+}
+
 /* People Subpage
 /* ---------------------------------------------------------- */
 

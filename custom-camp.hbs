@@ -21,13 +21,17 @@
     </header>
     {{/match}}
 
-    <div class="ghos3-container ghost-camp-container">
-        {{content}}
-
-        <div class="ghos3-button-list-centered">
-            <a class="ghos3-button ghost-button-secondary" href="#projects">Projects</a>
-            <a class="ghos3-button ghost-button-secondary" href="#workshops">Workshops</a>
-            <a class="ghos3-button ghost-button-secondary" href="#lectures">Lectures</a>
+    <div class="ghos3-container ghos3-camp-container">
+        <div class="ghos3-camp-header">
+            <h1 class="ghos3-camp-title">S<sup>3</sup> {{date published_at format="YYYY"}}</h1>
+            <div class="ghos3-camp-duration">
+                {{content}}
+            </div>
+        </div>
+        <div class="ghos3-button-list">
+            <a class="ghos3-button ghos3-button-secondary" href="#projects">Projects</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#workshops">Workshops</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#lectures">Lectures</a>
         </div>    
 
         <h2 id="projects">Projects</h2>
@@ -36,13 +40,13 @@
             The bulk of your time at the School will be spent working on a <strong>research project</strong>. You may indicate your preference regarding the project in your application, but teams will be assigned upon arrival to the School, once you get to meet the project leaders in person.
         </p>
         <p>
-            Below are the projects available during this years camp.
+            Below are the projects available during this camp.
         </p>
 
         <section class="ghos3-projects">
             {{#get "posts" filter=(concat "tags:project+tags:" slug) include="tags,authors"}}
             {{#match posts.length "=" 0}}
-                <p>TBA</p>
+                <p>Coming soon...</p>
             {{/match}}
             {{#foreach posts}}
                 {{> "project"}}
@@ -54,7 +58,7 @@
         <section class="ghos3-workshops">
             {{#get "posts" filter=(concat "tags:workshop+tags:" slug) include="tags,authors"}}
             {{#match posts.length "=" 0}}
-                <p>TBA</p>
+                <p>Coming soon...</p>
             {{/match}}
             {{#foreach posts}}
                 {{> "workshop"}}
@@ -67,7 +71,7 @@
         <section class="ghos3-lectures">
             {{#get "posts" filter=(concat "tags:lecture+tags:" slug) include="tags,authors"}}
             {{#match posts.length "=" 0}}
-                <p>TBA</p>
+                <p>Coming soon...</p>
             {{/match}}
             {{#foreach posts}}
                 {{> "lecture"}}
