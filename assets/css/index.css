@@ -50,6 +50,12 @@ html,
     flex-direction: column;
 }
 
+@media (max-width: 700px) {
+    .ghos3-main {
+        padding: 0 10px;
+    }
+}
+
 .ghos3-page {
     padding: 0;
 }
@@ -602,6 +608,12 @@ cite.ghos3-quote-author:before {content: "\2015  "}
 
 .ghos3-camp-container section {
     margin: 2rem 0;
+}
+
+@media (max-width: 700px) {
+    .ghos3-camp-header {
+        text-align: center;
+    }
 }
 
 

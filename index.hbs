@@ -76,12 +76,12 @@
                             <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup> / S<sup>3</sup>++</a>
                         </div>
                         <div class="ghos3-camp-dates">
-                            28 July - 9 August, 2024
+                            28 July - 8 August, 2024
                         </div>
                     </div>
                 {{/match}}
                 {{#match @custom.camps "Split"}}
-                    <p>This year our usual S<sup>3</sup> and S<sup>3</sup>++ camps will be merged, and held on the following dates:</p>
+                    <p>This year camps will be held on the following dates:</p>
                     <div class="ghos3-camp-list">
                         <div class="ghos3-camp-button">
                             <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
@@ -100,6 +100,36 @@
                 </div>
             {{/match}}
             {{#match @custom.state "Upcoming - apps opened"}}
+                <div>
+                {{#match @custom.camps "Merged"}}
+                    <p>Applications are now open! Check out our projects available at our merged S<sup>3</sup> camp, which will be held on the following dates:</p>
+                    <div class="ghos3-camp-list">
+                        <div class="ghos3-camp-button">
+                            <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup> / S<sup>3</sup>++</a>
+                        </div>
+                        <div class="ghos3-camp-dates">
+                            28 July - 8 August, 2024
+                        </div>
+                    </div>
+                {{/match}}
+                {{#match @custom.camps "Split"}}
+                    <p>Applications are now open! Check out our projects available at our S<sup>3</sup> and S<sup>3</sup>++ camps, which will be held on the following dates:</p>
+                    <div class="ghos3-camp-list">
+                        <div class="ghos3-camp-button">
+                            <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
+                        </div>
+                        <div class="ghos3-camp-dates">
+                            25 July - 5 August, 2025
+                        </div>
+                        <div class="ghos3-camp-button">
+                            <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
+                        </div>
+                        <div class="ghos3-camp-dates">
+                            5 August - 13 August, 2025
+                        </div>
+                    </div>
+                {{/match}}
+                </div>
             {{/match}}
             {{#match @custom.state "Selection"}}
             {{/match}}
@@ -163,7 +193,7 @@
                     Applicants requesting a scholarship must also include a letter explaining their financial situation. Read more under <i>Fees</i>.
                 </p>
                 <p>
-                    <strong>Applications open:</strong> 1 April 2024, 00:00 CET <br/>
+                    <strong>Applications open:</strong> 22 April 2024, 00:00 CEST <br/>
                     <strong>Application deadline:</strong> 31 May 2024, 23:59 CEST
                 </p>
                 <p>
@@ -200,6 +230,6 @@
                     <a class="ghos3-link-primary" href="/scholarships">Scholarships and sponsors</a>
                 </div>
             </div>
-        </section >
+        </section>
     </div>
 </div>

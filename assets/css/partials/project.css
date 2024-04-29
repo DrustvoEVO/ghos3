@@ -63,4 +63,26 @@
 
 .ghos3-project-leader-bio {
     font-size: small;
+    text-align: justify;
+}
+
+@media (max-width: 700px) {
+    .ghos3-project-summary {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-project-leader {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-project-leader-image {
+        display: block;
+        margin: auto;
+    }
+    .ghos3-project-leader-name,
+    .ghos3-project-leader-affiliation {
+        text-align: center;
+    }
+    .ghos3-project-image {
+        grid-row: 1;
+    }
+    
 }

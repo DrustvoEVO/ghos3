@@ -76,11 +76,6 @@
     font-size: 1.8rem;
 }
 
-.ghos3-foot-menu .nav li {
-    margin: 0 1.5vmin;
-    padding: 0;
-}
-
 .ghos3-foot-menu a {
     width: 50px;
     height: 50px;
@@ -103,6 +98,36 @@
 @media (max-width: 700px) {
     .ghos3-foot-menu .nav {
         font-size: 1.6rem;
+    }
+    .ghos3-foot-inner {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .ghos3-foot-brand {
+        text-align: center;
+    }
+    .ghos3-foot-logo {
+        align-items: center;
+        display: block;
+        margin: auto;
+    }
+    .ghos3-foot-logo img {
+        padding: 0;
+        max-height: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .ghos3-foot-right {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-foot-menu {
+        flex-direction: row;
+    }
+    .ghos3-foot-menu a {
+        margin: 0 10px;
+    }
+    .ghos3-foot-map {
+        max-width: 90%;
     }
 }
 

@@ -234,7 +234,7 @@ figcaption strong {
 
 .kg-callout-card {
     background: var(--color-secondary);
-    border: 2px dashed var(--color-primary);
-    border-radius: var(--radius);
+    /* border: 2px dashed var(--color-primary); */
+    border-radius: 2rem;
     padding: 2rem;
 }
