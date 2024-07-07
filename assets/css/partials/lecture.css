@@ -6,13 +6,17 @@ details.ghos3-lecture {
     overflow: hidden;
 }
 
+details.ghos3-lecture summary {
+    list-style: none;
+  }
+
 details.ghos3-lecture summary::marker {
     display: none;
-  }
+}
 
 .ghos3-lecture-summary {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 180px;
     gap: 20px;
 }
 
