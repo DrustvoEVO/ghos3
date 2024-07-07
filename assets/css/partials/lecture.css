@@ -10,7 +10,8 @@ details.ghos3-lecture summary {
     list-style: none;
   }
 
-details.ghos3-lecture summary::marker {
+details.ghos3-lecture summary::marker,
+details.ghos3-lecture summary::-webkit-details-marker {
     display: none;
 }
 
