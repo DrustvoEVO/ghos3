@@ -1,0 +1,47 @@
+<details class="ghos3-lecture">
+    <summary class="ghos3-lecture-summary">
+        <div>
+            <p class="ghos3-lecturer-list-short">
+                {{#foreach authors}}
+                    {{#if @last}}
+                        {{name}}
+                    {{else}}
+                        {{name}}, 
+                    {{/if}}
+                {{/foreach}}
+                | <span class="ghos3-lecture-date">{{excerpt}}</span>
+            </p>
+            <h5 class="ghos3-lecture-title">{{title}}</h5>
+        </div>
+        <div class="ghos3-lecture-read-more">
+            Read more
+        </div>
+    </summary>
+    <div class="ghos3-lecture-details">
+        <div class="ghos3-lecture-about">
+            {{content}}
+        </div>
+        <div class="ghos3-lecturer-list">
+            {{#foreach authors}}
+            <div class="ghos3-lecturer">
+                {{#if profile_image}}
+                    <img class="ghos3-lecturer-image" src="{{profile_image}}" />
+                {{else}}
+                    <img class="ghos3-lecturer-image" src="{{ asset 'assets/images/placeholder-people.png'}}" />
+                {{/if}}
+                <div>
+                    <p class="ghos3-lecturer-name">{{name}}</p>
+                    <p class="ghos3-lecturer-affiliation">{{location}}</p>
+                    <div class="ghos3-lecturer-bio">
+                        {{#get "posts" filter=(concat "tags:about+primary_author:" slug) include="tags,authors"}}
+                        {{#foreach posts}}
+                            {{content}}
+                        {{/foreach}}
+                        {{/get}}
+                    </div>
+                </div>
+            </div>
+            {{/foreach}}
+        </div>
+    </div>
+</details>

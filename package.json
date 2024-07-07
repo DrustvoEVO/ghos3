@@ -1,7 +1,7 @@
 {
     "name": "ghos3",
     "description": "Custom Ghost theme for Summer School of Science",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": "MIT",
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
@@ -30,7 +30,7 @@
         "custom": {
             "email": {
                 "type": "text",
-                "default": "summerschoolofdcience@drustvo-evo.hr",
+                "default": "summerschoolofscience@drustvo-evo.hr",
                 "description": "Email address shown in footer, contact and simmilar pages and pop-ups."
             },
             "legal": {
