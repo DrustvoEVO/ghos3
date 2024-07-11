@@ -1,0 +1,84 @@
+.ghos3-workshop {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 4rem;
+    margin-bottom: 4rem;
+}
+
+.ghos3-workshop-summary {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.ghos3-workshop-title {
+    display: flex;
+}
+
+.ghos3-workshop-name {
+    margin-top: 0;
+}
+
+.ghos3-workshop-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghos3-workshop-image {
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.ghos3-workshop-about {
+    font-size: small;
+    text-align: justify;
+}
+
+.ghos3-workshop-leader-list {
+    
+}
+
+.ghos3-workshop-leader {
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 20px;       
+}
+
+.ghos3-workshop-leader-name {
+    font-weight: var(--font-bold);
+}
+
+.ghos3-workshop-leader-image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius);
+    max-height: 200px;
+}
+
+.ghos3-workshop-leader-bio {
+    font-size: small;
+    text-align: justify;
+}
+
+@media (max-width: 700px) {
+    .ghos3-workshop-summary {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-workshop-leader {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-workshop-leader-image {
+        display: block;
+        margin: auto;
+    }
+    .ghos3-workshop-leader-name,
+    .ghos3-workshop-leader-affiliation {
+        text-align: center;
+    }
+    .ghos3-workshop-image {
+        grid-row: 1;
+    }
+    
+}

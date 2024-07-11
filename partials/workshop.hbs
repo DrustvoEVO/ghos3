@@ -1,0 +1,40 @@
+<div class="ghos3-workshop">
+    <div class="ghos3-workshop-summary">   
+        <div class="ghos3-workshop-details">
+            <div class="ghos3-workshop-title">
+                <h5 class="ghos3-workshop-name">{{title}}</h5>
+                <div class="ghos3-workshop-category" style="color: {{primary_tag.accent_color}};">
+                    {{!-- <img class="ghos3-workshop-category-image" src="{{primary_tag.feature_image}}"/> {{primary_tag.name}} --}}
+                </div>
+            </div>
+            <div class="ghos3-workshop-about">
+                {{content}}
+            </div>
+        </div>
+        <div class="ghos3-workshop-image-container">
+            <img class="ghos3-workshop-image" src="{{feature_image}}"/>
+        </div>
+    </div>
+    <div class="ghos3-workshop-leader-list">
+        {{#foreach authors}}
+        <div class="ghos3-workshop-leader">
+            {{#if profile_image}}
+                <img class="ghos3-workshop-leader-image" src="{{profile_image}}" />
+            {{else}}
+                <img class="ghos3-workshop-leader-image" src="{{ asset 'assets/images/placeholder-people.png'}}" />
+            {{/if}}
+            <div>
+                <p class="ghos3-workshop-leader-name">{{name}}</p>
+                <p class="ghos3-workshop-leader-affiliation">{{location}}</p>
+                <div class="ghos3-workshop-leader-bio">
+                    {{#get "posts" filter=(concat "tags:about+primary_author:" slug) include="tags,authors"}}
+                    {{#foreach posts}}
+                        {{content}}
+                    {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+        </div>
+        {{/foreach}}
+    </div>
+</div>

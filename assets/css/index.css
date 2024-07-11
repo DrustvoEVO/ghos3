@@ -29,7 +29,9 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "partials/recommendation.css";
 @import "partials/project.css";
 @import "partials/workshop.css";
+@import "partials/workshop-public.css";
 @import "partials/lecture.css";
+@import "partials/lecture-public.css";
 
 
 
