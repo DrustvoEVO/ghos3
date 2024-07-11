@@ -1,0 +1,103 @@
+details.ghos3-lecture {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 3rem 4rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+details.ghos3-lecture summary {
+    list-style: none;
+  }
+
+details.ghos3-lecture summary::marker,
+details.ghos3-lecture summary::-webkit-details-marker {
+    display: none;
+}
+
+.ghos3-lecture-summary {
+    display: grid;
+    grid-template-columns: auto 180px;
+    gap: 20px;
+}
+
+.ghos3-lecturer-list-short,
+.ghos3-lecture-title {
+    margin-top: 0;
+}
+
+.ghos3-lecture-date {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+.ghos3-lecture-read-more {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    display: inline-block;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    border-radius: var(--radius);
+    padding: 1rem 2rem;
+    margin: auto 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ghos3-lecture-about {
+    text-align: justify;
+    font-size: smaller;
+    margin: 1.5rem 0;
+}
+
+.ghos3-lecturer-list {
+    
+}
+
+.ghos3-lecturer {
+    display: grid;
+    grid-template-columns: 120px auto;
+    gap: 20px;       
+}
+
+.ghos3-lecturer-name {
+    font-weight: var(--font-bold);
+    margin-bottom: 0;
+}
+
+.ghos3-lecturer-affiliation {
+    margin-top: 0;
+}
+
+.ghos3-lecturer-image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius);
+    max-height: 120px;
+}
+
+.ghos3-lecturer-bio {
+    font-size: small;
+    text-align: justify;
+}
+
+@media (max-width: 700px) {
+    .ghos3-lecture-summary {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-lecturer {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-lecturer-image {
+        display: block;
+        margin: auto;
+    }
+    .ghos3-lecturer-name,
+    .ghos3-lecturer-affiliation {
+        text-align: center;
+    }
+    .ghos3-lecture-image {
+        grid-row: 1;
+    }
+    
+}

@@ -1,0 +1,130 @@
+{{!< default}}
+
+{{#post}}
+<article class="ghos3-article {{post_class}}">
+    {{#match @page.show_title_and_feature_image}}
+    <header class="ghos3-header ghos3-canvas">
+        <h1 class="ghos3-title">S<sup>3</sup> {{date published_at format="YYYY"}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="ghos3-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <figure class="ghos3-feature-image">
+                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+    </header>
+    {{/match}}
+
+    <div class="ghos3-container ghos3-public-events-container">
+        <div class="ghos3-public-events-header">
+            <h1 class="ghos3-public-events-title">Public events @ S<sup>3</sup> {{date published_at format="YYYY"}}</h1>
+        </div>  
+
+        <h2>Official events</h2>
+
+        <div class="ghos3-public-event-list">
+            <div class="ghos3-public-event">
+                <h5 class="ghos3-public-event-title">Official opening</h5>
+                <div class="ghos3-public-event-date-time">
+                    July 28, 2024, 19:00 - 19:30 CEST
+                </div>
+                <div class="ghos3-public-event-location">
+                    Student Dorm Novi Zagreb
+                    <a href="https://maps.app.goo.gl/iLppZGFXQH7k1SBd8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-location" width="12" height="12" viewBox="0 0 24 24" stroke-width="3" stroke="#ff7d43" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                        </svg>
+                    </a>
+                    <div class="ghos3-public-event-address">
+                        Većeslav Holjevac Avenue 3, 10000 Zagreb
+                    </div>
+                </div>
+                <a class="ghos3-public-event-add-to-calendar" href="/content/files/2024/07/s3-2024-official-opening.ics" download="s3-2024-official-opening">Add to calendar</a>
+            </div>                
+
+            <div class="ghos3-public-event">
+                <h5 class="ghos3-public-event-title">Final presentations and closing ceremony</h5>
+                <div class="ghos3-public-event-date-time">
+                    August 7, 2024, 20:00 - 23:00 CEST
+                </div>
+                <div class="ghos3-public-event-location">
+                    Student Dorm Novi Zagreb
+                    <a href="https://maps.app.goo.gl/iLppZGFXQH7k1SBd8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-location" width="12" height="12" viewBox="0 0 24 24" stroke-width="3" stroke="#ff7d43" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                        </svg>
+                    </a>
+                    <div class="ghos3-public-event-address">
+                        Većeslav Holjevac Avenue 3, 10000 Zagreb
+                    </div>
+                </div>
+                <a class="ghos3-public-event-add-to-calendar" href="/content/files/2024/07/s3-2024-final-presentations.ics" download="s3-2024-final-presentations">Add to calendar</a>
+            </div>
+        </div>
+        
+
+        <h2>Open day</h2>
+        
+        <div class="ghos3-public-events-open-day">
+            <img src="{{asset 'assets/images/open-day.jpg'}}" />
+            <div>
+                <h5>Come and take a look 👀</h5>
+                <div class="ghos3-public-event-date-time">
+                    August 4, 2024, 16:30 - 19:30 CEST
+                </div>
+                <div class="ghos3-public-events-open-day-description">
+                    On the eighth day of the camp, at any time between <strong>16:30</strong> and <strong>19:30</strong> you can visit us and take a look at what our participants are doing during their project work. Each group will guide you through their projects and show you what they had been working on during the week. 
+                </div>
+                <div class="ghos3-public-event-location">
+                    School of Surveying, Zagreb
+                    <a href="https://maps.app.goo.gl/B1msvpv9Ljw1qTGk7">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-location" width="12" height="12" viewBox="0 0 24 24" stroke-width="3" stroke="#ff7d43" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                        </svg>
+                    </a>
+                    <div class="ghos3-public-event-address">
+                        Većeslav Holjevac Avenue 15, 10000 Zagreb
+                    </div>
+                </div>
+                <a class="ghos3-public-event-add-to-calendar" href="/content/files/2024/07/s3-2024-open-day.ics" download="s3-2024-final-presentations">Add to calendar</a>
+            </div>
+        </div>
+
+        <h2>Workshops</h2>
+        <section class="ghos3-workshops">
+            {{#get "posts" filter=(concat "tags:workshop+tags:public+tags:s3-" (date published_at format="YYYY")) include="tags,authors"}}
+            {{#match posts.length "=" 0}}
+                <p>Coming soon...</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "workshop-public"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
+        
+        <h2>Lectures</h2>
+        <section class="ghos3-lectures">
+            {{#get "posts" filter=(concat "tags:lecture+tags:public+tags:s3-" (date published_at format="YYYY")) include="tags,authors"}}
+            {{#match posts.length "=" 0}}
+                <p>Coming soon...</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "lecture-public"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
+    </div>
+
+</article>
+{{/post}}

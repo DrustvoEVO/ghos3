@@ -648,3 +648,122 @@ cite.ghos3-quote-author:before {content: "\2015  "}
 .ghos3-faq-answer {
     
 }
+
+/* Public events Subpage
+/* ---------------------------------------------------------- */
+
+.ghos3-public-events-container {
+    max-width: 1200px;
+}
+
+.ghos3-public-events-header {
+    margin-bottom: 2rem;
+}
+
+.ghos3-public-events-title {
+    display: inline-block;
+    font-size: 5rem;
+
+}
+
+.ghos3-public-event-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.ghos3-public-event {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    > h5 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.ghos3-public-event-date-time {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+.ghos3-public-event-location {
+    padding: 2rem 0;
+
+    > a {
+        display: inline-block;
+        width: 24px;
+        background: var(--color-secondary);
+        border-radius: 12px;
+        > svg {
+            position: relative;
+            left: 5px;
+            top: 2px;
+        }
+    }
+}
+
+.ghos3-public-event-address {
+    font-size: smaller;
+}
+
+.ghos3-public-event-add-to-calendar {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    font-size: smaller;
+    display: inline-block;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius);
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ghos3-public-events-open-day {
+    background: #ffffff;
+    border-radius: var(--radius);
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 360px auto;
+
+    > img {
+        width: 100%;
+        max-width: 360px;
+        aspect-ratio: 1;
+    }
+
+    > div {
+        padding: 3rem;
+        > h5 {
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+.ghos3-public-events-open-day-description {
+    padding-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    .ghos3-public-events-header {
+        text-align: center;
+    }
+    .ghos3-public-event-list {
+        grid-template-columns: 1fr;
+    }
+    .ghos3-public-event {
+        margin-bottom: 1rem;
+    }
+    .ghos3-public-events-open-day {
+        grid-template-columns: 1fr;
+
+        > img {
+            max-width: 680px;
+        }
+    }
+}
