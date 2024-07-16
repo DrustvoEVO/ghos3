@@ -87,6 +87,7 @@ details.ghos3-lecture summary::-webkit-details-marker {
     }
     .ghos3-lecturer {
         grid-template-columns: 1fr;
+        gap: 0;
     }
     .ghos3-lecturer-image {
         display: block;

@@ -1,23 +1,24 @@
 <details class="ghos3-lecture">
-    <summary class="ghos3-lecture-summary">
-        <div>
+    <summary class="ghos3-lecture-summary-public">
+        <img class="ghos3-lecture-image" src="{{feature_image}}"/>
+        <div class="ghos3-lecture-summary-text">
             <p class="ghos3-lecturer-list-short">
                 {{#foreach authors}}
                     {{#if @last}}
-                        {{name}}
+                        <strong>{{name}}</strong>, {{location}}
                     {{else}}
-                        {{name}}, 
+                        <strong>{{name}}</strong>, {{location}};  
                     {{/if}}
                 {{/foreach}}
                 | <span class="ghos3-lecture-date">{{excerpt}}</span>
             </p>
             <h5 class="ghos3-lecture-title">{{title}}</h5>
-        </div>
-        <div class="ghos3-lecture-read-more">
-            Read more
+            <div class="ghos3-lecture-read-more-public">
+                Read more
+            </div>
         </div>
     </summary>
-    <div class="ghos3-lecture-details">
+    <div class="ghos3-lecture-details-public">
         <div class="ghos3-lecture-about">
             {{content}}
         </div>

@@ -1,0 +1,8 @@
+.ghos3-workshop-name-public {
+    margin-bottom: 0.5rem;
+}
+
+.ghos3-workshop-date {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
