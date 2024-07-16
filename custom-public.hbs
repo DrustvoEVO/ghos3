@@ -98,19 +98,6 @@
                 <a class="ghos3-public-event-add-to-calendar" href="/content/files/2024/07/s3-2024-open-day.ics" download="s3-2024-final-presentations">Add to calendar</a>
             </div>
         </div>
-
-        <h2>Workshops</h2>
-        <section class="ghos3-workshops">
-            {{#get "posts" filter=(concat "tags:workshop+tags:public+tags:s3-" (date published_at format="YYYY")) include="tags,authors"}}
-            {{#match posts.length "=" 0}}
-                <p>Coming soon...</p>
-            {{/match}}
-            {{#foreach posts}}
-                {{> "workshop-public"}}
-            {{/foreach}}
-            {{/get}}
-        </section>
-
         
         <h2>Lectures</h2>
         <section class="ghos3-lectures">
@@ -120,6 +107,18 @@
             {{/match}}
             {{#foreach posts}}
                 {{> "lecture-public"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
+        <h2>Workshops</h2>
+        <section class="ghos3-workshops">
+            {{#get "posts" filter=(concat "tags:workshop+tags:public+tags:s3-" (date published_at format="YYYY")) include="tags,authors"}}
+            {{#match posts.length "=" 0}}
+                <p>Coming soon...</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "workshop-public"}}
             {{/foreach}}
             {{/get}}
         </section>
