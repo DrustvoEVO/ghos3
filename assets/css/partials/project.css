@@ -3,6 +3,7 @@
     border-radius: var(--radius);
     padding: 4rem;
     margin-bottom: 4rem;
+    position: relative;
 }
 
 .ghos3-project-summary {

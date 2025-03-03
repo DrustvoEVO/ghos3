@@ -8,7 +8,7 @@
     --color-secondary: #ffe3c7;         /* -- */
     --color-gradient: #fd4b33;          /* -- */
     --color-special-red: #e00f20;       /* -- */
-    --color-special-yellow: #ffbb14;    /* -- */
+    --color-special-yellow: #ffc250;    /* -- */
     --color-base: #131313;              /* --black */
     --color-dark: #451e0c;              /* -- */
     --color-border: #ddd;               /* -- */
@@ -37,5 +37,6 @@
     --height: 4rem;
     --margin: 2rem;
     --radius: 2rem;
+    --blur: 8px;
 
 }

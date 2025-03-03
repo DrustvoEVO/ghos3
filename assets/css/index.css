@@ -292,6 +292,45 @@ html,
     }
 }
 
+/* Marquee
+/* ---------------------------------------------------------- */
+
+.ghos3-marquee-bar.ghos3-messages{
+    position: relative;
+    overflow: hidden;
+}
+.ghos3-marquee-bar .ghos3-message{
+    text-align: center;
+    padding: 2px 0 2px 0;
+    display: inline-block;
+}
+.cus-marquee {
+    height: 3rem;
+    overflow-x: hidden;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.cus-content{
+    color: var(--color-special-yellow);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    white-space: nowrap;
+    height: 100%;
+    display: inline-flex !important;
+    align-items: center;
+    animation: marquee 500s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 /* Hero
 /* ---------------------------------------------------------- */
@@ -442,6 +481,9 @@ section.ghos3-section-white {
 }
 
 .ghos3-camp-dates {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -618,6 +660,26 @@ cite.ghos3-quote-author:before {content: "\2015  "}
     }
 }
 
+.ghos3-blurred {
+    -webkit-filter: blur(var(--blur)); 
+	-moz-filter: blur(var(--blur)); 
+	-o-filter: blur(var(--blur)); 
+	-ms-filter: blur(var(--blur)); 
+	filter: blur(var(--blur)); 
+}
+
+.ghos3-coming-soon-overlay {
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    font-weight: var(--font-heavy);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* People Subpage
 /* ---------------------------------------------------------- */

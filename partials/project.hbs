@@ -1,5 +1,5 @@
 <div class="ghos3-project">
-    <div class="ghos3-project-summary">   
+    <div class="ghos3-project-summary {{#unless featured}}ghos3-blurred{{/unless}}">   
         <div class="ghos3-project-details">
             <div class="ghos3-project-title">
                 <h5 class="ghos3-project-name">{{title}}</h5>
@@ -13,7 +13,7 @@
         </div>
         <img class="ghos3-project-image" src="{{feature_image}}"/>
     </div>
-    <div class="ghos3-project-leader-list">
+    <div class="ghos3-project-leader-list {{#unless featured}}ghos3-blurred{{/unless}}">
         {{#foreach authors}}
         <div class="ghos3-project-leader">
             {{#if profile_image}}
@@ -35,4 +35,10 @@
         </div>
         {{/foreach}}
     </div>
+
+    {{#unless featured}}
+    <div class="ghos3-coming-soon-overlay">
+        Coming soon...
+    </div>
+    {{/unless}}
 </div>

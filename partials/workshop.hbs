@@ -1,5 +1,5 @@
 <div class="ghos3-workshop">
-    <div class="ghos3-workshop-summary">   
+    <div class="ghos3-workshop-summary {{#unless featured}}ghos3-blurred{{/unless}}">   
         <div class="ghos3-workshop-details">
             <div class="ghos3-workshop-title">
                 <h5 class="ghos3-workshop-name">{{title}}</h5>
@@ -15,7 +15,7 @@
             <img class="ghos3-workshop-image" src="{{feature_image}}"/>
         </div>
     </div>
-    <div class="ghos3-workshop-leader-list">
+    <div class="ghos3-workshop-leader-list {{#unless featured}}ghos3-blurred{{/unless}}">
         {{#foreach authors}}
         <div class="ghos3-workshop-leader">
             {{#if profile_image}}
@@ -37,4 +37,10 @@
         </div>
         {{/foreach}}
     </div>
+
+    {{#unless featured}}
+    <div class="ghos3-coming-soon-overlay">
+        Coming soon...
+    </div>
+    {{/unless}}
 </div>
