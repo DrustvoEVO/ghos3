@@ -30,8 +30,8 @@
         </div>
         <div class="ghos3-button-list">
             <a class="ghos3-button ghos3-button-secondary" href="#projects">Projects</a>
-            <a class="ghos3-button ghos3-button-secondary" href="#workshops">Workshops</a>
             <a class="ghos3-button ghos3-button-secondary" href="#lectures">Lectures</a>
+            <a class="ghos3-button ghos3-button-secondary" href="#workshops">Workshops</a>
         </div>    
 
         <h2 id="projects">Projects</h2>
@@ -54,6 +54,18 @@
             {{/get}}
         </section>
 
+        <h2 id="lectures">Lectures</h2>
+        <section class="ghos3-lectures">
+            {{#get "posts" filter=(concat "tags:lecture+tags:" slug) include="tags,authors"}}
+            {{#match posts.length "=" 0}}
+                <p>Coming soon...</p>
+            {{/match}}
+            {{#foreach posts}}
+                {{> "lecture-public"}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+
         <h2 id="workshops">Workshops</h2>
         <section class="ghos3-workshops">
             {{#get "posts" filter=(concat "tags:workshop+tags:" slug) include="tags,authors"}}
@@ -64,20 +76,7 @@
                 {{> "workshop"}}
             {{/foreach}}
             {{/get}}
-        </section>
-
-        
-        <h2 id="lectures">Lectures</h2>
-        <section class="ghos3-lectures">
-            {{#get "posts" filter=(concat "tags:lecture+tags:" slug) include="tags,authors"}}
-            {{#match posts.length "=" 0}}
-                <p>Coming soon...</p>
-            {{/match}}
-            {{#foreach posts}}
-                {{> "lecture"}}
-            {{/foreach}}
-            {{/get}}
-        </section>
+        </section>        
 
     </div>
 
