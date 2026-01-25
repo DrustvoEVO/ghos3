@@ -37,7 +37,7 @@
                     </div>
                     <div class="ghos3-hero-tag">
                         <img src="{{asset 'assets/icons/hero-tag-late-july-early-mid-august.svg'}}" />
-                        <span>late July / early-mid August</span>
+                        <span>late July</span>
                     </div>
                     <div class="ghos3-hero-tag">
                         <img src="{{asset 'assets/icons/hero-tag-pozega-croatia.svg'}}" />
@@ -61,7 +61,7 @@
             <div class="ghos3-section-text">
                 <h1>About</h1>
                 <p>
-                    <strong>Summer School of Science</strong> is an international summer workshop established in 2001. It is organized by the <strong>Society for Out-of-Frame Education</strong> in Zagreb, Croatia. The program aims at high school students and offers a diverse range of research projects and lectures in the fields of science and technology.
+                    <strong>Summer School of Science</strong> is an international summer workshop established in 2001. It is organized by the <strong>{{#if @custom.legal}}{{@custom.legal}}{{else}}Society For Education Outside the Box{{/if}}</strong> in Zagreb, Croatia. The program aims at high school students and offers a diverse range of research projects and lectures in the fields of science and technology.
                 </p>
                 <p>
                     Summer School of Science was historically organized in two camps: <strong>S<sup>3</sup></strong> (for grades 9 and 10) and <strong>S<sup>3</sup>++</strong> (for grades 11, 12 and 13). Since 2024, the two camps have been merged into a <strong>single S<sup>3</sup>/S<sup>3</sup>++ camp</strong> open to high school students of all ages.
@@ -82,13 +82,13 @@
             {{#match @custom.state "Upcoming - apps opening soon"}}
                 <div>
                 {{#match @custom.camps "Merged"}}
-                    <p>This year our usual S<sup>3</sup> and S<sup>3</sup>++ camps will be merged, and held on the following dates:</p>
+                    <p>This year our now usual merged S<sup>3</sup>/S<sup>3</sup>++ camp will be held on the following dates:</p>
                     <div class="ghos3-camp-list">
                         <div class="ghos3-camp-button">
                             <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup> / S<sup>3</sup>++</a>
                         </div>
                         <div class="ghos3-camp-dates">
-                            20 July - 31 July 2025
+                            July 19 - July 30, 2026
                         </div>
                     </div>
                 {{/match}}
@@ -99,13 +99,13 @@
                             <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
                         </div>
                         <div class="ghos3-camp-dates">
-                            25 July - 5 August, 2025
+                            25 July - 5 August, 2026
                         </div>
                         <div class="ghos3-camp-button">
                             <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
                         </div>
                         <div class="ghos3-camp-dates">
-                            5 August - 13 August, 2025
+                            5 August - 13 August, 2026
                         </div>
                     </div>
                 {{/match}}
@@ -120,7 +120,7 @@
                             <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup> / S<sup>3</sup>++</a>
                         </div>
                         <div class="ghos3-camp-dates">
-                            20 July - 31 July 2025
+                            July 19 - July 30, 2026
                         </div>
                     </div>
                 {{/match}}
@@ -131,13 +131,13 @@
                             <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
                         </div>
                         <div class="ghos3-camp-dates">
-                            25 July - 5 August, 2025
+                            25 July - 5 August, 2026
                         </div>
                         <div class="ghos3-camp-button">
                             <a class="ghos3-button ghos3-button-secondary" href="/s3pp-{{date format="YYYY"}}">S<sup>3</sup>++</a> 
                         </div>
                         <div class="ghos3-camp-dates">
-                            5 August - 13 August, 2025
+                            5 August - 13 August, 2026
                         </div>
                     </div>
                 {{/match}}
@@ -151,20 +151,20 @@
                             <a class="ghos3-button ghos3-button-secondary" href="/s3-{{date format="YYYY"}}">S<sup>3</sup> / S<sup>3</sup>++</a>
                         </div>
                         <div class="ghos3-camp-dates">
-                            20 July - 31 July 2025
+                            July 19 - July 30, 2026
                         </div>
                     </div>
                 </div>
             {{/match}}
             {{#match @custom.state "Archive"}}
                 <div>
-                    <p>Applications for the next year's camps will be opened in February 2025. Until then, you can check out the projects available in previous camps:</p>
+                    <p>Applications for the next year's camps will be opened in late February 2027. Until then, you can check out the projects available in previous camps:</p>
                     <div class="ghos3-camp-list">
                         <div class="ghos3-camp-button">
-                            <a class="ghos3-button ghos3-button-secondary" href="/s3-2024">S<sup>3</sup> / S<sup>3</sup>++</a>
+                            <a class="ghos3-button ghos3-button-secondary" href="/s3-2026">S<sup>3</sup> / S<sup>3</sup>++</a>
                         </div>
                         <div class="ghos3-camp-dates">
-                            20 July - 31 July 2025
+                            July 19 - July 30, 2026
                         </div>
                     </div>
                 </div>
@@ -227,13 +227,13 @@
                     Applicants requesting a scholarship must also include a letter explaining their financial situation. Read more under <i>Fees</i>.
                 </p>
                 <p>
-                    <strong>Applications open:</strong> 3 March 2025, 00:00 CET <br/>
-                    <!--<del>--><strong>Application deadline:</strong> 16 May 2025, 23:59 CEST<!--</del>--> <br/>
-                    <strong>Extended applications:</strong> 3 June 2025, 23:59 CEST*
+                    <strong>Applications open:</strong> TBA, expected early March <br/>
+                    <!--<del>--><strong>Application deadline:</strong> TBA, expected late May<!--</del>--> <br/>
+                    {{!-- <strong>Extended applications:</strong> 3 June 2025, 23:59 CEST* --}}
                 </p>
-                <p>
+                {{!-- <p>
                     * Swiss students applying for the ETH scholarship may apply after this deadline (until 15 June). All other applicants must apply by 3 June. See APPLY page for details (link below).
-                </p>
+                </p> --}}
                 <p>
                     After applications close, all applications will be reviewed by the supervisor and organizers, and a certain number of applicants will be invited for an <strong>online interview</strong>. More information can be found at the links below. The results of the final selection process will be announced during the week after interviews are held.
                 </p>

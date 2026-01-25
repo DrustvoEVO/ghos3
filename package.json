@@ -1,7 +1,7 @@
 {
     "name": "ghos3",
     "description": "Custom Ghost theme for Summer School of Science",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "license": "MIT",
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
@@ -16,7 +16,7 @@
     },
     "author": {
         "name": "Luka Korov",
-        "email": "Luka.Korov@Drustvo-EVO.hr"
+        "email": "Luka.Korov@SummerSchoolOfScience.com"
     },
     "keywords": [
         "ghost",
@@ -30,12 +30,12 @@
         "custom": {
             "email": {
                 "type": "text",
-                "default": "summerschoolofscience@drustvo-evo.hr",
+                "default": "hello@summerschoolofscience.com",
                 "description": "Email address shown in footer, contact and simmilar pages and pop-ups."
             },
             "legal": {
                 "type": "text",
-                "default": "Society for Out-of-Frame Education",
+                "default": "Society For Education Outside the Box",
                 "description": "Official name of the legal entity behind Summer School."
             },
             "state": {
