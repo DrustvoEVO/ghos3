@@ -30,7 +30,7 @@
         "custom": {
             "email": {
                 "type": "text",
-                "default": "hello@summerschoolofscience.com",
+                "default": "info@summerschoolofscience.com",
                 "description": "Email address shown in footer, contact and simmilar pages and pop-ups."
             },
             "legal": {
