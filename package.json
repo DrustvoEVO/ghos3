@@ -1,7 +1,7 @@
 {
     "name": "ghos3",
     "description": "Custom Ghost theme for Summer School of Science",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "license": "MIT",
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",

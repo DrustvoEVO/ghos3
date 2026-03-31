@@ -4,9 +4,17 @@
         <img src="{{feature_image}}"/>
     </div>     
     <div class="ghos3-recommendation-about">
-        <h2 class="ghos3-recommendation-title">{{title}}</h2>
-        <p class="ghos3-recommendation-affiliation">London Research Institute, United Kingdom</p>
-        <p class="ghos3-recommendation-description">Nobel Prize in Physiology or Medicine 2001</p>
+        {{#foreach (split title separator= "|")}}
+            {{#if @first}}
+                <h2 class="ghos3-recommendation-title">{{this}}</h2>
+            {{/if}}
+            {{#unless @first}}{{#unless @last}}
+                <p class="ghos3-recommendation-affiliation">{{this}}</p>
+            {{/unless}}{{/unless}}
+            {{#if @last}}
+                <p class="ghos3-recommendation-description">{{this}}</p>             
+            {{/if}}
+        {{/foreach}}
     </div>
 </div>
 <div class="ghos3-recommendation-text">
@@ -14,4 +22,4 @@
         {{content}}
     </p>
 </div>
-<a class="ghos3-link-primary ghos3-recommendation-link" href="https://summerschoolofscience.com/content/files/2026/03/S3_RecommendationLetters.pdf" target="_blank">Full recommendation letter</a>
+<a class="ghos3-link-primary ghos3-recommendation-link" href="{{excerpt}}" target="_blank">Full recommendation letter</a>
