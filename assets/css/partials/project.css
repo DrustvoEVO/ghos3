@@ -45,6 +45,10 @@
     
 }
 
+.ghos3-project-leader-list .ghos3-project-leader:not(:first-child)  {
+    margin-top: 20px;
+}
+
 .ghos3-project-leader {
     display: grid;
     grid-template-columns: 200px auto;
